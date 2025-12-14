@@ -31,7 +31,8 @@
 
 .header {
   margin-bottom: var(--space-2xl);
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 .title {
@@ -58,7 +59,8 @@
   padding: var(--space-xl);
   margin-bottom: var(--space-2xl);
   backdrop-filter: blur(10px);
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+  opacity: 0;
   box-shadow: var(--shadow-soft);
 }
 
@@ -325,45 +327,11 @@
   animation: subtlePulse 3s ease-in-out infinite;
 }
 
-.stagger1,
-.stagger2,
-.stagger3,
-.stagger4,
-.stagger5 {
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .header {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-
-  .filtersContainer {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
-    opacity: 0;
-  }
-
-  .stagger1 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards; opacity: 0; }
-  .stagger2 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards; opacity: 0; }
-  .stagger3 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.32s forwards; opacity: 0; }
-  .stagger4 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.42s forwards; opacity: 0; }
-  .stagger5 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.52s forwards; opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .filtersContainer,
-  .stagger1,
-  .stagger2,
-  .stagger3,
-  .stagger4,
-  .stagger5 {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
-}
+.stagger1 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards; opacity: 0; }
+.stagger2 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards; opacity: 0; }
+.stagger3 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.32s forwards; opacity: 0; }
+.stagger4 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.42s forwards; opacity: 0; }
+.stagger5 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.52s forwards; opacity: 0; }
 
 .accentMint { --match-accent-color: var(--color-primary); }
 .accentBlue { --match-accent-color: var(--color-secondary); }

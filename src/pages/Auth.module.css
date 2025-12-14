@@ -15,22 +15,8 @@
   border-radius: var(--radius-xl);
   padding: calc(var(--space-xl) + var(--space-sm));
   box-shadow: var(--shadow-soft);
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .card {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .card {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 .title {

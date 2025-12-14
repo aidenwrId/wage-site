@@ -5,7 +5,8 @@
 
 .header {
   margin-bottom: var(--space-2xl);
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 .backButton {
@@ -79,7 +80,8 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
   box-shadow: var(--shadow-soft);
 }
 
@@ -400,36 +402,6 @@
   line-height: var(--leading-relaxed);
 }
 
-.stagger1,
-.stagger2,
-.stagger3 {
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .header {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-
-  .panel {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-
-  .stagger1 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
-  .stagger2 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
-  .stagger3 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .panel,
-  .stagger1,
-  .stagger2,
-  .stagger3 {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
-}
+.stagger1 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+.stagger2 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
+.stagger3 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }

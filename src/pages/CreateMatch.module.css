@@ -5,7 +5,8 @@
 
 .header {
   margin-bottom: var(--space-2xl);
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 .title {
@@ -26,28 +27,8 @@
 }
 
 .form {
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .header {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-
-  .form {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
-    opacity: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .form {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  opacity: 0;
 }
 
 .formPanel {

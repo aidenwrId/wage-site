@@ -5,7 +5,8 @@
 
 .header {
   margin-bottom: var(--space-2xl);
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 .title {
@@ -37,29 +38,9 @@
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   transition: transform var(--motion-base) ease, box-shadow var(--motion-base) ease, border-color var(--motion-base) ease;
-  opacity: 1;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
   box-shadow: var(--shadow-inner);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .header {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-
-  .itemCard {
-    animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .itemCard {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
 }
 
 .itemCard:hover {
