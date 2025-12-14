@@ -333,20 +333,6 @@
 .stagger4 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.42s forwards; opacity: 0; }
 .stagger5 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.52s forwards; opacity: 0; }
 
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .filtersContainer,
-  .stagger1,
-  .stagger2,
-  .stagger3,
-  .stagger4,
-  .stagger5 {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
-}
-
 .accentMint { --match-accent-color: var(--color-primary); }
 .accentBlue { --match-accent-color: var(--color-secondary); }
 .accentAmber { --match-accent-color: var(--color-amber); }

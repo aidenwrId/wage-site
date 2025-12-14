@@ -43,15 +43,6 @@
   box-shadow: var(--shadow-inner);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .itemCard {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
-}
-
 .itemCard:hover {
   border-color: var(--color-border-strong);
   transform: translateY(-2px);

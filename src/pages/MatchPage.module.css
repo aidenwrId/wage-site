@@ -405,15 +405,3 @@
 .stagger1 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
 .stagger2 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
 .stagger3 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
-
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .panel,
-  .stagger1,
-  .stagger2,
-  .stagger3 {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
-}

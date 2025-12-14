@@ -46,15 +46,6 @@
   box-shadow: var(--shadow-inner);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .packageCard {
-    opacity: 1;
-    animation: none;
-    transform: none;
-  }
-}
-
 .packageCard:hover {
   border-color: var(--color-border-strong);
   transform: translateY(-2px);
