@@ -20,21 +20,29 @@ export default function BrowseMatches() {
     return true
   })
 
-  const getGameAccentColor = (gameId) => {
-    const colors = {
-      'fortnite': '#3EE6A8',
-      'cod': '#6B7CFF',
-      'valorant': '#6B7CFF',
-      'cs2': '#3EE6A8',
-      'rocket-league': '#F2B84B',
-      'r6': '#6B7CFF',
-      'apex': '#F2B84B',
-      'lol': '#3EE6A8',
-      'overwatch': '#F2B84B',
-      'smash': '#6B7CFF'
+  const accentClass = (gameId) => {
+    const accentMap = {
+      fortnite: styles.accentMint,
+      cod: styles.accentBlue,
+      valorant: styles.accentBlue,
+      cs2: styles.accentMint,
+      'rocket-league': styles.accentAmber,
+      r6: styles.accentBlue,
+      apex: styles.accentAmber,
+      lol: styles.accentMint,
+      overwatch: styles.accentAmber,
+      smash: styles.accentBlue
     }
-    return colors[gameId] || '#3EE6A8'
+    return accentMap[gameId] || styles.accentMint
   }
+
+  const delayClasses = [
+    styles.stagger1,
+    styles.stagger2,
+    styles.stagger3,
+    styles.stagger4,
+    styles.stagger5
+  ]
 
   return (
     <div className={styles.pageContainer}>
@@ -44,7 +52,6 @@ export default function BrowseMatches() {
           <p className={styles.subtitle}>Find your next competitive match</p>
         </div>
 
-        {/* Filters */}
         <div className={styles.filtersContainer}>
           <div className={styles.filtersGrid}>
             <div className={styles.filterGroup}>
@@ -103,19 +110,16 @@ export default function BrowseMatches() {
           </div>
         </div>
 
-        {/* Match List */}
         <div className={styles.matchesList}>
           {filteredMatches.map((match, idx) => {
-            const accentColor = getGameAccentColor(match.game)
+            const statusClass = match.status === 'active' ? styles.statusActive : styles.statusWaiting
+            const staggerClass = delayClasses[idx % delayClasses.length]
+
             return (
               <Link
                 key={match.id}
                 to={`/match/${match.id}`}
-                className={`${styles.matchCard} ${styles.matchCardStagger}`}
-                style={{
-                  '--match-accent-color': accentColor,
-                  animationDelay: `${(idx + 2) * 0.08}s`
-                }}
+                className={`${styles.matchCard} ${accentClass(match.game)} ${staggerClass}`}
               >
                 <div className={styles.matchCardContent}>
                   <div className={styles.matchCardLeft}>
@@ -142,11 +146,7 @@ export default function BrowseMatches() {
                       </div>
                     </div>
                   </div>
-                  <div className={`${styles.statusBadge} ${
-                    match.status === 'active' 
-                      ? styles.statusActive 
-                      : styles.statusWaiting
-                  }`}>
+                  <div className={`${styles.statusBadge} ${statusClass}`}>
                     {match.status === 'active' ? 'In progress' : 'Waiting'}
                   </div>
                 </div>
