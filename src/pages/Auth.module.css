@@ -19,6 +19,14 @@
   opacity: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
 .title {
   font-family: var(--font-heading);
   font-weight: var(--weight-bold);

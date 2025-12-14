@@ -31,6 +31,15 @@
   opacity: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .form {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
 .formPanel {
   background: linear-gradient(150deg, rgba(24, 40, 60, 0.95), rgba(20, 32, 48, 0.9));
   border: 1px solid var(--color-border);
