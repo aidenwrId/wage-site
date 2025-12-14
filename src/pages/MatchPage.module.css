@@ -1,26 +1,24 @@
-/* Match Page - Premium Immersive Layout */
-
 .pageContainer {
   position: relative;
-  padding: 3rem 0;
+  padding: var(--space-3xl) 0;
 }
 
 .header {
-  margin-bottom: 2.5rem;
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  margin-bottom: var(--space-2xl);
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
 .backButton {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
-  transition: color 0.2s ease;
+  padding: var(--space-xs) 0;
+  margin-bottom: var(--space-sm);
+  transition: color var(--motion-fast) ease;
 }
 
 .backButton:hover {
@@ -30,33 +28,33 @@
 .headerContent {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-lg);
 }
 
 .gameIcon {
-  font-size: 4rem;
+  font-size: var(--text-5xl);
 }
 
 .headerText h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.2;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
   letter-spacing: -0.02em;
   color: var(--color-text);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-2xs);
 }
 
 .headerText p {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-text-soft);
 }
 
 .contentGrid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
+  gap: var(--space-lg);
 }
 
 @media (max-width: 1024px) {
@@ -68,31 +66,31 @@
 .mainContent {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--space-lg);
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--space-lg);
 }
 
 .panel {
-  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
-  border: 1px solid rgba(55, 65, 81, 0.4);
-  border-radius: 16px;
-  padding: 1.75rem;
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  background: linear-gradient(150deg, rgba(24, 40, 60, 0.95), rgba(20, 32, 48, 0.9));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-soft);
 }
 
 .panelTitle {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xl);
   color: var(--color-text);
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--space-md);
   letter-spacing: -0.01em;
 }
 
@@ -100,206 +98,206 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-lg);
 }
 
 .statusBadge {
-  font-family: 'IBM Plex Sans', sans-serif;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8125rem;
-  font-weight: 600;
+  font-family: var(--font-body);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
 }
 
 .statusActive {
   background: var(--color-success);
-  color: var(--color-background);
+  color: var(--color-bg-900);
 }
 
 .statusWaiting {
   background: transparent;
-  border: 1.5px solid var(--color-warning);
-  color: var(--color-warning);
+  border: 1.5px solid var(--color-amber);
+  color: var(--color-amber);
 }
 
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .stat {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-xs);
 }
 
 .statLabel {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
 }
 
 .statValue {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-2xl);
   color: var(--color-text);
   letter-spacing: -0.02em;
 }
 
 .joinButton {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-body);
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: var(--color-background);
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-strong) 100%);
+  color: var(--color-bg-900);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
   border: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
-  margin-top: 1rem;
+  transition: transform var(--motion-fast) ease, box-shadow var(--motion-base) ease;
+  box-shadow: 0 10px 28px rgba(124, 226, 196, 0.3);
+  margin-top: var(--space-md);
 }
 
 .joinButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+  box-shadow: 0 14px 34px rgba(124, 226, 196, 0.36);
 }
 
 .playersList {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .playerCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background: rgba(17, 24, 39, 0.5);
-  border: 1px solid rgba(55, 65, 81, 0.3);
-  border-radius: 12px;
+  padding: var(--space-md);
+  background: rgba(15, 22, 33, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
 }
 
 .playerInfo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .playerAvatar {
-  font-size: 1.5rem;
+  font-size: var(--text-xl);
 }
 
 .playerDetails h4 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 600;
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
   color: var(--color-text);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-2xs);
 }
 
 .playerDetails p {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.8125rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-text-soft);
 }
 
 .playerStatus {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
   color: var(--color-success);
 }
 
 .emptySlot {
-  padding: 1rem;
-  background: rgba(17, 24, 39, 0.3);
-  border: 2px dashed rgba(55, 65, 81, 0.5);
-  border-radius: 12px;
+  padding: var(--space-md);
+  background: rgba(15, 22, 33, 0.5);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
   text-align: center;
 }
 
 .emptySlotText {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
 }
 
 .rulesContent {
-  background: rgba(17, 24, 39, 0.5);
-  border: 1px solid rgba(55, 65, 81, 0.3);
-  border-radius: 12px;
-  padding: 1.25rem;
+  background: rgba(15, 22, 33, 0.6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
 }
 
 .rulesText {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-text-soft);
+  line-height: var(--leading-relaxed);
   white-space: pre-line;
 }
 
 .submitButton {
-  font-family: 'IBM Plex Sans', sans-serif;
-  padding: 0.875rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-success) 0%, #2BC88A 100%);
-  color: var(--color-background);
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-body);
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(120deg, var(--color-success) 0%, var(--color-primary-strong) 100%);
+  color: var(--color-bg-900);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
   border: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+  transition: transform var(--motion-fast) ease, box-shadow var(--motion-base) ease;
+  box-shadow: 0 10px 28px rgba(124, 226, 196, 0.3);
 }
 
 .submitButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+  box-shadow: 0 14px 34px rgba(124, 226, 196, 0.38);
 }
 
 .voiceButton {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-body);
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: var(--color-background);
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-strong) 100%);
+  color: var(--color-bg-900);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
   border: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+  transition: transform var(--motion-fast) ease, box-shadow var(--motion-base) ease;
+  box-shadow: 0 10px 28px rgba(124, 226, 196, 0.3);
 }
 
 .voiceButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+  box-shadow: 0 14px 34px rgba(124, 226, 196, 0.36);
 }
 
 .voiceControls {
   display: flex;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .leaveButton {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: var(--space-sm) var(--space-md);
   background: var(--color-error);
   color: var(--color-text);
-  border-radius: 10px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: opacity var(--motion-fast) ease;
 }
 
 .leaveButton:hover {
@@ -307,25 +305,25 @@
 }
 
 .muteButton {
-  padding: 0.75rem 1rem;
-  background: rgba(17, 24, 39, 0.6);
-  border: 1px solid rgba(55, 65, 81, 0.4);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(15, 22, 33, 0.75);
+  border: 1px solid var(--color-border);
   color: var(--color-text);
-  border-radius: 10px;
-  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background var(--motion-fast) ease, border-color var(--motion-fast) ease;
 }
 
 .muteButton:hover {
-  background: rgba(17, 24, 39, 0.8);
-  border-color: rgba(55, 65, 81, 0.6);
+  background: rgba(20, 30, 44, 0.85);
+  border-color: var(--color-border-strong);
 }
 
 .chatContainer {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: calc(var(--space-3xl) * 2 + var(--space-xl));
 }
 
 .chatMessages {
@@ -333,89 +331,89 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  padding-right: 0.5rem;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  padding-right: var(--space-xs);
 }
 
 .chatMessage {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
 }
 
 .chatUser {
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   color: var(--color-primary);
 }
 
 .chatText {
-  color: var(--color-text-secondary);
+  color: var(--color-text-soft);
 }
 
 .chatForm {
   display: flex;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .chatInput {
   flex: 1;
-  padding: 0.75rem 1rem;
-  background: rgba(17, 24, 39, 0.6);
-  border: 1px solid rgba(55, 65, 81, 0.5);
-  border-radius: 10px;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(15, 22, 33, 0.75);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   color: var(--color-text);
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  transition: all 0.25s ease;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  transition: border-color var(--motion-fast) ease, background var(--motion-fast) ease, box-shadow var(--motion-fast) ease;
 }
 
 .chatInput:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: rgba(17, 24, 39, 0.8);
-  box-shadow: 0 0 0 3px rgba(62, 230, 168, 0.12);
+  background: rgba(20, 30, 44, 0.85);
+  box-shadow: 0 0 0 3px rgba(124, 226, 196, 0.12);
 }
 
 .chatSendButton {
-  padding: 0.75rem 1.25rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: var(--color-background);
-  border-radius: 10px;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-strong) 100%);
+  color: var(--color-bg-900);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
   border: none;
   cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 8px rgba(62, 230, 168, 0.2);
+  transition: transform var(--motion-fast) ease, box-shadow var(--motion-base) ease;
+  box-shadow: 0 8px 20px rgba(124, 226, 196, 0.28);
 }
 
 .chatSendButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(62, 230, 168, 0.3);
+  box-shadow: 0 12px 24px rgba(124, 226, 196, 0.34);
 }
 
 .description {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-md);
+  line-height: var(--leading-relaxed);
 }
 
-.stagger1 { animation-delay: 0.1s; }
-.stagger2 { animation-delay: 0.2s; }
-.stagger3 { animation-delay: 0.3s; }
+.stagger1 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+.stagger2 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
+.stagger3 { animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .panel,
+  .stagger1,
+  .stagger2,
+  .stagger3 {
     opacity: 1;
-    transform: translateY(0);
+    animation: none;
+    transform: none;
   }
 }
-

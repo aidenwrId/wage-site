@@ -1,50 +1,58 @@
-/* Layout - Premium Navigation */
-
 .header {
-  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
-  border-bottom: 1px solid rgba(55, 65, 81, 0.4);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(17, 27, 40, 0.9), rgba(19, 30, 46, 0.85));
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  z-index: var(--z-header);
+  box-shadow: var(--shadow-inner);
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: var(--space-md) 0;
+  gap: var(--space-lg);
 }
 
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
   text-decoration: none;
   letter-spacing: -0.02em;
-  transition: color 0.2s ease;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  background: radial-gradient(circle at 30% 30%, rgba(124, 226, 196, 0.18), transparent 50%),
+    rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-inner);
+  transition: color var(--motion-fast) ease, transform var(--motion-fast) ease, border-color var(--motion-fast) ease;
 }
 
 .logo:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
+  border-color: var(--color-border-strong);
+  transform: translateY(-1px);
 }
 
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-lg);
 }
 
 .navLink {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-soft);
   text-decoration: none;
-  transition: all 0.2s ease;
   position: relative;
+  padding: var(--space-xs) 0;
+  transition: color var(--motion-fast) ease, opacity var(--motion-fast) ease;
 }
 
 .navLink::after {
@@ -54,8 +62,9 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-primary);
-  transition: width 0.2s ease;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width var(--motion-base) ease;
+  border-radius: var(--radius-pill);
 }
 
 .navLink:hover {
@@ -69,47 +78,59 @@
 .userSection {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 1px solid var(--color-border);
 }
 
 .userInfo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
 }
 
 .signUpButton {
-  font-family: 'IBM Plex Sans', sans-serif;
-  padding: 0.625rem 1.25rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: var(--color-background);
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  padding: var(--space-sm) var(--space-lg);
+  background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-strong) 100%);
+  color: var(--color-bg-900);
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 8px rgba(62, 230, 168, 0.2);
+  transition: transform var(--motion-fast) ease, box-shadow var(--motion-fast) ease;
+  box-shadow: 0 8px 24px rgba(124, 226, 196, 0.25);
+  border: 1px solid var(--color-border-strong);
 }
 
 .signUpButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.3);
+  box-shadow: 0 12px 30px rgba(124, 226, 196, 0.35);
 }
 
 .footer {
-  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
-  border-top: 1px solid rgba(55, 65, 81, 0.4);
-  padding: 2rem 0;
+  background: linear-gradient(180deg, rgba(17, 27, 40, 0.85), rgba(12, 18, 27, 0.92));
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-xl) 0;
   margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(124, 226, 196, 0.1), transparent 45%);
+  pointer-events: none;
 }
 
 .footerText {
   text-align: center;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
 }
-

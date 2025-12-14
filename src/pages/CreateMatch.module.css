@@ -1,49 +1,56 @@
-/* Create Match Page - Premium Form */
-
 .pageContainer {
   position: relative;
-  padding: 3rem 0;
+  padding: var(--space-3xl) 0;
 }
 
 .header {
-  margin-bottom: 2.5rem;
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  margin-bottom: var(--space-2xl);
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
 .title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.2;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
+  line-height: var(--leading-tight);
   letter-spacing: -0.02em;
   color: var(--color-text);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
 }
 
 .subtitle {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-text-soft);
+  line-height: var(--leading-relaxed);
 }
 
 .form {
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  animation: fadeInUp var(--motion-slow) cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
   opacity: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .form {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
 .formPanel {
-  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
-  border: 1px solid rgba(55, 65, 81, 0.4);
-  border-radius: 16px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(150deg, rgba(24, 40, 60, 0.95), rgba(20, 32, 48, 0.9));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  box-shadow: var(--shadow-soft);
 }
 
 .formGroup {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-lg);
 }
 
 .formGroup:last-child {
@@ -52,34 +59,34 @@
 
 .label {
   display: block;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
   color: var(--color-text);
-  margin-bottom: 0.625rem;
+  margin-bottom: var(--space-xs);
 }
 
 .input,
 .select,
 .textarea {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-body);
   width: 100%;
-  padding: 0.875rem 1.125rem;
-  background: rgba(17, 24, 39, 0.6);
-  border: 1px solid rgba(55, 65, 81, 0.5);
-  border-radius: 12px;
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(15, 22, 33, 0.85);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   color: var(--color-text);
-  font-size: 0.9375rem;
-  font-weight: 400;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  line-height: 1.5;
+  font-size: var(--text-md);
+  font-weight: var(--weight-regular);
+  transition: border-color var(--motion-fast) ease, box-shadow var(--motion-fast) ease, background var(--motion-fast) ease;
+  line-height: var(--leading-snug);
 }
 
 .input:hover,
 .select:hover,
 .textarea:hover {
-  border-color: rgba(55, 65, 81, 0.7);
-  background: rgba(17, 24, 39, 0.7);
+  border-color: var(--color-border-strong);
+  background: rgba(20, 30, 44, 0.88);
 }
 
 .input:focus,
@@ -87,79 +94,67 @@
 .textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: rgba(17, 24, 39, 0.8);
-  box-shadow: 0 0 0 3px rgba(62, 230, 168, 0.12);
+  background: rgba(22, 33, 48, 0.95);
+  box-shadow: 0 0 0 3px rgba(124, 226, 196, 0.12);
 }
 
 .textarea {
-  min-height: 120px;
+  min-height: calc(var(--space-3xl) + var(--space-xl));
   resize: vertical;
 }
 
 .helpText {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  margin-top: 0.5rem;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
+  margin-top: var(--space-xs);
+  line-height: var(--leading-relaxed);
 }
 
 .warningBox {
-  background: rgba(242, 184, 75, 0.1);
-  border: 1px solid rgba(242, 184, 75, 0.3);
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
+  background: rgba(247, 201, 122, 0.1);
+  border: 1px solid rgba(247, 201, 122, 0.35);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .warningText {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.875rem;
-  color: var(--color-warning);
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-amber);
+  margin-bottom: var(--space-2xs);
+  line-height: var(--leading-relaxed);
 }
 
 .warningSubtext {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.8125rem;
-  color: var(--color-text-secondary);
-  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-text-soft);
+  line-height: var(--leading-relaxed);
 }
 
 .submitButton {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-body);
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: var(--color-background);
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-strong) 100%);
+  color: var(--color-bg-900);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
   border: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+  transition: transform var(--motion-fast) ease, box-shadow var(--motion-base) ease;
+  box-shadow: 0 10px 30px rgba(124, 226, 196, 0.3);
 }
 
 .submitButton:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+  box-shadow: 0 14px 34px rgba(124, 226, 196, 0.38);
 }
 
 .submitButton:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
 }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
