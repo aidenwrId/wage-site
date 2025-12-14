@@ -15,7 +15,7 @@ export default function Layout({ children }) {
           <div className="container mx-auto px-gutter">
             <nav className={styles.nav}>
               <Link to="/" className={styles.logo}>
-                SkillMatch
+                AetherForge
               </Link>
               
               <div className={styles.navLinks}>
@@ -56,7 +56,7 @@ export default function Layout({ children }) {
         <footer className={styles.footer}>
           <div className="container mx-auto px-gutter">
             <p className={styles.footerText}>
-              SkillMatch — Competitive skill-based gaming platform
+              AetherForge — Competitive skill-based gaming arena
             </p>
           </div>
         </footer>
