@@ -1,0 +1,136 @@
+/* Store Page - Premium Grid */
+
+.pageContainer {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.itemCard {
+  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
+  border: 1px solid rgba(55, 65, 81, 0.4);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.itemCard:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.itemIcon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.itemName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.itemDescription {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.itemFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemPrice {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.purchaseButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(62, 230, 168, 0.2);
+}
+
+.purchaseButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(62, 230, 168, 0.3);
+}
+
+.purchaseButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ownedButton {
+  background: rgba(62, 230, 168, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(62, 230, 168, 0.3);
+}
+
+.errorButton {
+  background: rgba(230, 92, 92, 0.15);
+  color: var(--color-error);
+  border: 1px solid rgba(230, 92, 92, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,115 @@
+/* Layout - Premium Navigation */
+
+.header {
+  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
+  border-bottom: 1px solid rgba(55, 65, 81, 0.4);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: var(--color-primary-dark);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-text);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.signUpButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(62, 230, 168, 0.2);
+}
+
+.signUpButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.3);
+}
+
+.footer {
+  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
+  border-top: 1px solid rgba(55, 65, 81, 0.4);
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footerText {
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+

@@ -1,0 +1,421 @@
+/* Match Page - Premium Immersive Layout */
+
+.pageContainer {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.backButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.gameIcon {
+  font-size: 4rem;
+}
+
+.headerText h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.headerText p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel {
+  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
+  border: 1px solid rgba(55, 65, 81, 0.4);
+  border-radius: 16px;
+  padding: 1.75rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.panelTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.statusHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.statusBadge {
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.statusActive {
+  background: var(--color-success);
+  color: var(--color-background);
+}
+
+.statusWaiting {
+  background: transparent;
+  border: 1.5px solid var(--color-warning);
+  color: var(--color-warning);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statLabel {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.statValue {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.joinButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+  margin-top: 1rem;
+}
+
+.joinButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+}
+
+.playersList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.playerCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid rgba(55, 65, 81, 0.3);
+  border-radius: 12px;
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.playerAvatar {
+  font-size: 1.5rem;
+}
+
+.playerDetails h4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.playerDetails p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.playerStatus {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-success);
+}
+
+.emptySlot {
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.3);
+  border: 2px dashed rgba(55, 65, 81, 0.5);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.emptySlotText {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.rulesContent {
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid rgba(55, 65, 81, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.rulesText {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.submitButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-success) 0%, #2BC88A 100%);
+  color: var(--color-background);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+}
+
+.voiceButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+}
+
+.voiceButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+}
+
+.voiceControls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.leaveButton {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: var(--color-error);
+  color: var(--color-text);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.leaveButton:hover {
+  opacity: 0.9;
+}
+
+.muteButton {
+  padding: 0.75rem 1rem;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(55, 65, 81, 0.4);
+  color: var(--color-text);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.muteButton:hover {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(55, 65, 81, 0.6);
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.chatMessages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
+}
+
+.chatMessage {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.chatUser {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.chatText {
+  color: var(--color-text-secondary);
+}
+
+.chatForm {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: 10px;
+  color: var(--color-text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  transition: all 0.25s ease;
+}
+
+.chatInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(17, 24, 39, 0.8);
+  box-shadow: 0 0 0 3px rgba(62, 230, 168, 0.12);
+}
+
+.chatSendButton {
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border-radius: 10px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(62, 230, 168, 0.2);
+}
+
+.chatSendButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(62, 230, 168, 0.3);
+}
+
+.description {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.stagger1 { animation-delay: 0.1s; }
+.stagger2 { animation-delay: 0.2s; }
+.stagger3 { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

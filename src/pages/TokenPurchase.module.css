@@ -1,0 +1,167 @@
+/* Token Purchase Page */
+
+.pageContainer {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.packageCard {
+  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
+  border: 1px solid rgba(55, 65, 81, 0.4);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.packageCard:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.packageCardSelected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(62, 230, 168, 0.2);
+}
+
+.bonusBadge {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  color: var(--color-text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.packageIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.packageTokens {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.packageBonus {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.packagePrice {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.purchaseButton {
+  font-family: 'IBM Plex Sans', sans-serif;
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(62, 230, 168, 0.25);
+}
+
+.purchaseButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(62, 230, 168, 0.35);
+}
+
+.infoBox {
+  background: linear-gradient(135deg, rgba(20, 27, 36, 0.95) 0%, rgba(24, 32, 44, 0.9) 100%);
+  border: 1px solid rgba(55, 65, 81, 0.4);
+  border-radius: 16px;
+  padding: 2rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+.infoTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.infoItem {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
